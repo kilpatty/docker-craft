@@ -1,5 +1,5 @@
 nginx:
-    build: ./nginx/
+    build: ./compose/nginx/
     ports:
         - 80:80
     links:
@@ -8,7 +8,7 @@ nginx:
         - app
 
 php:
-    build: ./php/
+    build: ./compose/php/
     expose:
         - 9000
     links:
@@ -19,11 +19,12 @@ php:
 app:
     image: php:7.0-fpm
     volumes:
-        -   .:/var/www/html
+        -   ./app:/var/www/html
+        -   ./vendors:/var/www
     command: "true"
 
 mysql:
-    image: mysql:latest
+    build: ./compose/mysql
     volumes_from:
         - data
     environment:

@@ -19,7 +19,7 @@ php:
 app:
     image: php:7.0-fpm
     volumes:
-        -   ./app:/var/www/html
+        -   ./app/public:/var/www/html
         -   ./vendors:/var/www
     command: "true"
 
@@ -39,11 +39,13 @@ data:
         - /var/lib/mysql
     command: "true"
 
-phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    ports:
-        - 8080:8080
-    links:
-        - mysql
-    environment:
-        PMA_HOST: mysql
+preprocess:
+    image: node:latest
+    volumes:
+        -   ./app/:/src/app/
+    command: "true"
+
+grunt:
+    build: ./compose/grunt
+    volumes_from:
+        - preprocess

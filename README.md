@@ -54,19 +54,19 @@ Automatic script run at Github clone that installs everything.
 
 ### NFS
 
-It is highly recommened that you change the mounted volumes to NFS. This drastically increases the speed by which the voluming syncing occurs. Without NFS, the mount will take significantly longer and slow the development process. There are currently two recommended ways to change the volumes to NFS. The first is this project which can switch a current docker-machine setup. The repository for that project is [here](https://github.com/adlogix/docker-machine-nfs).
+It is highly recommended that you change the mounted volumes to NFS. This drastically increases the speed by which the voluming syncing occurs. Without NFS, the mount will take significantly longer and slow the development process. There are currently two recommended ways to change the volumes to NFS. The first is this project which can switch a current docker-machine setup. The repository for that project is [here](https://github.com/adlogix/docker-machine-nfs).
 
 The second recommended method is to use [Dinghy](https://github.com/codekitchen/dinghy)
 Both methods will achieve NFS voluming syncing, thus it is up to you to decide which you prefer.
 
 ### Grunt
 
-I use Grunt for my own personal use. If you follow my tutorial, this is likely something that you will be using as well. I have kept it outside of the idea of Docker Containerization, because I do not think that it is right to force a developer into a use of helper tools. That is, if you are developing a project in a group, you should add your grunt files to the git ignore, therefore the other developers are free to use tools that they may be more familiar with (ie gulp) This follows the idea that if it works on the server, then however you get the end files there is up to you, we shouldn't be forcing developers into standard tools but instead let them choose how they get the code where it needs to be.
+TODO: Enter basic Grunt configuration and show how to customize it.
 
 ### Nginx
 
 Nginx is used as the server as opposed to Apache2. Discussion surrounding this can be read [here](http://systemsarchitect.net/2013/03/28/apache2-vs-nginx-for-php-application/
-) and [here](https://www.digitalocean.com/community/tutorials/apache-vs-nginx-practical-considerations)
+) and [here](https://www.digitalocean.com/community/tutorials/apache-vs-nginx-practical-considerations).
 A basic Nginx server configuration has been used for this project. To further customize this configuration, edit the file named 'default.conf' in /compose/nginx.
 
 ### MYSQL

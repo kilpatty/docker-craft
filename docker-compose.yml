@@ -1,11 +1,13 @@
 nginx:
     build: ./compose/nginx/
     ports:
-        - 80:80
+        - 81:81
     links:
         - php
     volumes_from:
         - app
+    environment:
+        VIRTUAL_HOST: craftapp.docker
 
 php:
     build: ./compose/php/
@@ -39,13 +41,13 @@ data:
         - /var/lib/mysql
     command: "true"
 
-preprocess:
-    image: node:latest
-    volumes:
-        -   ./app/:/src/app/
-    command: "true"
-
-grunt:
-    build: ./compose/grunt
+developer:
+    build: ./compose/developer
     volumes_from:
-        - preprocess
+        -   devdata
+
+devdata:
+    image: node:argon
+    volumes:
+        -   ./app:/usr/src/app
+    command: "true"

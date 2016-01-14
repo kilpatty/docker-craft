@@ -22,7 +22,7 @@ app:
     image: php:7.0-fpm
     volumes:
         -   ./app/public:/var/www/html
-        -   ./vendors:/var/www
+        -   ./craft:/var/www/craft
     command: "true"
 
 mysql:

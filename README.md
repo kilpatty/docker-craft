@@ -49,6 +49,10 @@ Add php.ini
 
 ##Notes
 
+###Craft
+https://github.com/imjakechapman/CraftCMS-Boilerplate
+http://beliefagency.com/blog/beliefs-craftcms-boilerplate
+
 ### NFS
 
 It is highly recommended that you change the mounted volumes to NFS. This drastically increases the speed by which the voluming syncing occurs. Without NFS, the mount will take significantly longer and slow the development process. There are currently two recommended ways to change the volumes to NFS. The first is this project which can switch a current docker-machine setup. The repository for that project is [here](https://github.com/adlogix/docker-machine-nfs).

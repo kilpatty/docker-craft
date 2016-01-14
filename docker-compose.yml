@@ -1,7 +1,7 @@
 nginx:
     build: ./compose/nginx/
     ports:
-        - 81:81
+        - 80:80
     links:
         - php
     volumes_from:
@@ -45,6 +45,9 @@ developer:
     build: ./compose/developer
     volumes_from:
         -   devdata
+    working_dir: /usr/src/app
+    links:
+        - nginx
 
 devdata:
     image: node:argon

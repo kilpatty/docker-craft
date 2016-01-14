@@ -3,14 +3,9 @@
 This is a boilerplate setup that uses Docker-Compose to implement Craft CMS on a basic Nginx Server with Php and Mysql. In addition to this, two separate containers are used for development task runner purposes (Grunt/Bower/Gulp/etc). The point of this is to allow for a front-end developer to maximize his time by giving him/her a fully functioning Docker set up with proper containerization without having to attempt to configure their own machine. This has been enabled through changing the mounted volumes from vboxf to NFS see [NFS](#nfs). Grunt is enabled by default although, it is easy to implement other task runners see [Grunt](#grunt)
 
 ##Installation
-First create a new folder which the new project will be started.
+Clone the Project into a new folder to begin setup
 
-    $ mkdir newProject
-
-Move into that folder, and then clone the git into that folder.
-
-    $ cd newProject
-    $ git clone https://github.com/Skilgarriff/docker-craft
+    $ git clone https://github.com/Skilgarriff/docker-craft newProject
 
 Open up the 'docker-compose.yml' file and enter in a username and password for the mysql environment variables.
 
@@ -50,6 +45,8 @@ Allow for automatic download of Bootstrap, Foundation, / choice of front end fra
 
 Automatic script run at Github clone that installs everything.
 
+Add php.ini
+
 ##Notes
 
 ### NFS
@@ -77,24 +74,4 @@ Issue Documented [here](https://craftcms.stackexchange.com/questions/12084/getti
 
 ## License
 
-The MIT License (MIT)
-
-Copyright (c) [2016] [Sean Kilgarriff]
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+The code is available under the [MIT License](/LICENSE).

@@ -1,18 +1,16 @@
 nginx:
-    build: ./compose/nginx/
+    image: skilgarriff/craft-nginx:dev
     ports:
         - 80:80
     links:
         - php
     volumes_from:
         - app
-    environment:
-        VIRTUAL_HOST: craftapp.docker
 
 php:
-    build: ./compose/php/
+    image: skilgarriff/craft-php
     expose:
-        - 9000
+        -   9000
     links:
         - mysql
     volumes_from:
@@ -21,12 +19,12 @@ php:
 app:
     image: php:7.0-fpm
     volumes:
-        -   ./app/public:/var/www/html
-        -   ./craft:/var/www/craft
+        -   ./app/dist:/var/www/html
+        -   ./app/craft:/var/www/craft
     command: "true"
 
 mysql:
-    build: ./compose/mysql
+    image: skilgarriff/craft-mysql
     volumes_from:
         - data
     environment:
@@ -43,9 +41,13 @@ data:
 
 developer:
     build: ./compose/developer
+    container_name: dev
     volumes_from:
         -   devdata
     working_dir: /usr/src/app
+    ports:
+        -   3000:3000
+        -   3001:3001
     links:
         - nginx
 

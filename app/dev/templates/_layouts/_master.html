@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js" lang="">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="VW91-yGOAPW8TtGlODfjWxhCfEbTjq7kfBVhJmOViq8" />
 
     <!-- OG, that's so meta -->
     {% include "_partials/_meta-tags" %}
 
     <!-- Get Ya Style On! -->
-    <link rel="stylesheet" href="/dist/styles/app.min.css">
+    <link rel="stylesheet" href="css/main.min.css">
 
     <!-- Dem Webfonts -->
 
@@ -33,6 +34,10 @@
 
     {% block content %}
     {% endblock %}
+
+    <script type='text/javascript' id="__bs_script__">//<![CDATA[
+    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.2.11.0.js'><\/script>".replace("HOST", location.hostname));
+//]]></script>
 
     {% if craft.config.devMode %}
     <script src="/dist/js/main.js"></script>

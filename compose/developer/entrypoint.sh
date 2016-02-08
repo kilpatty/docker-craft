@@ -1,7 +1,10 @@
 #!/bin/bash
 
+#Need to install Gulp CLI globally.
 npm install -g gulp
 
+#Install all packages from Package.json.
 npm install
 
-npm start
+#Run our default Gulp task.
+gulp

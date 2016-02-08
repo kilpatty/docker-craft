@@ -64,18 +64,6 @@ Both methods will achieve NFS voluming syncing, thus it is up to you to decide w
 
 TODO: Enter basic Grunt configuration and show how to customize it.
 
-### Nginx
-
-Nginx is used as the server as opposed to Apache2. Discussion surrounding this can be read [here](http://systemsarchitect.net/2013/03/28/apache2-vs-nginx-for-php-application/
-) and [here](https://www.digitalocean.com/community/tutorials/apache-vs-nginx-practical-considerations).
-A basic Nginx server configuration has been used for this project. To further customize this configuration, edit the file named 'default.conf' in /compose/nginx.
-
-### MYSQL
-
-We had to change the MYSQL 'Group by' settings due to Craft version 2.5 not working correctly with these settings with an updated Mysql version. When Craft Version 3 is released, then we can revert back these changes as it is no longer needed to change the mysql group by default. This change to the Mysql configuration is stored in Craft.cnf.
-
-Issue Documented [here](https://craftcms.stackexchange.com/questions/12084/getting-this-sql-error-group-by-incompatible-with-sql-mode-only-full-group-by/12473)
-
 ## License
 
 The code is available under the [MIT License](/LICENSE).

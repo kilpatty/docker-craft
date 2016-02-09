@@ -39,7 +39,7 @@ Upon start up of the containers, the developer container will run the gulp defau
 ###Bourbon, Neat, Bitters with 7-1 Sass.
 This project has been built with Bourbon, Neat, Bitters and a 7-1 Sass file structure. Sass is not required to use this project, but these files have been provided to help jumpstart a project with the most customization possible. For further reference, you can investigate Bourbon, Neat, and Bitters: [here](http://bourbon.io/). The 7-1 format and boilerplate code can be found: [here](http://sass-guidelin.es/)
 
-##Browser-Sync
+###Browser-Sync
 Browser-Sync in this project through the developer container. When gulp watch is executed through gulp default, any changes to sass will automatically be injected into the server running on the nginx container, and any changes to html, images, or javascript will reload the browser window automatically. To connect to the Browser-Sync UI simply connect through port 3001 of whatever ip you would use to connect to docker-machine normally.
 
 ### Gulp
@@ -61,7 +61,7 @@ That command then allows you to run separate gulp commands you may have. To opti
 ##Notes
 
 ###Craft
-This Craft setup comes with the bare-minimum required to start up. Some local/production configuration features have been borrowed from other Craft CMS boilerplates. These can both be referenced [here](https://github.com/imjakechapman/CraftCMS-Boilerplate) and [here](http://beliefagency.com/blog/beliefs-craftcms-boilerplate). I would recommend both of these if you are looking to further understand how to customize Craft. 
+This Craft setup comes with the bare-minimum required to start up. Some local/production configuration features have been borrowed from other Craft CMS boilerplates. These can both be referenced [here](https://github.com/imjakechapman/CraftCMS-Boilerplate) and [here](http://beliefagency.com/blog/beliefs-craftcms-boilerplate). I would recommend both of these if you are looking to further understand how to customize Craft.
 
 ### NFS
 
